@@ -1,0 +1,21 @@
+<section>
+    <header>
+      <app-header></app-header>
+    </header>
+
+  <main #main>
+    <div #leftBar class="leftBar">
+      <button color="primary" *ngIf="cartProducts && !isMinimize && !isAdmin" title="minimizer" type="button" class="bi bi-box-arrow-up-left minimizer" (click)="minimize()"></button>
+      <router-outlet name="leftBar"></router-outlet>
+    </div>
+    <div #mainBar class="mainBar">
+      <button mat-raised-button color="primary" type="button" *ngIf="cartProducts && isMinimize" title="maximizer" class="minimizedTab bi bi-arrows-angle-expand" (click)="maximize()">&nbsp;Click Here to see Your Cart</button>
+      <router-outlet></router-outlet>
+    </div>
+</main>
+
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+
+</section>

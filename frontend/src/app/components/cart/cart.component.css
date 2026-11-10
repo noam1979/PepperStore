@@ -1,0 +1,84 @@
+section{
+  height: 90%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    padding: 10px;
+}
+
+.cartDiv{
+    grid-row: span 12;
+    grid-column: span 6;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cartHeader h1{
+    text-align: center;
+    font-family: 'Unbounded', cursive;
+    font-weight: bold;
+  }
+
+  .cartHeader, .adminDiv{
+    grid-row: span 0.5;
+    grid-column: span 6;
+  }
+
+  .cartBody{
+    grid-row: span 7;
+    grid-column: span 6;
+    overflow-y: auto;
+  }
+
+  .cartFooter{
+    text-align: right;
+    padding-top: 10px;
+    grid-row: span 4;
+    grid-column: span 6;
+  }
+
+  .cartFooter h4{
+    font-family: 'Unbounded', cursive;
+  }
+
+  .deleteAllBtn, .checkOutBtn{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-family: 'Unbounded', cursive;
+}
+
+.backBtn{
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: 'Unbounded', cursive;
+}
+
+table, th, td{
+  text-align: center;
+  font-size: smaller;
+}
+
+table{
+  margin: auto;
+  width: 100%;
+  font-family: 'Sriracha', cursive;
+}
+
+thead{
+  position:sticky;
+  top: 0 ;
+  background-color: whitesmoke;
+  font-size: larger;
+}
+
+::ng-deep .highlighted-text{
+  background-color: yellow;
+}
+
+.bi{
+  border: none;
+  background-color: transparent;
+}

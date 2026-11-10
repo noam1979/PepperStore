@@ -1,0 +1,41 @@
+<div class="orderDiv">
+  <h1>Order</h1><hr>
+  <form (ngSubmit)="onOrder()" #orderForm="ngForm">
+    <h3>Shipping Details</h3>
+
+      <mat-form-field appearance="fill" class="orderInputs" >
+        <mat-label>Choose a Date</mat-label>
+        <input matInput title="Choose Date" class="datePicker" #shipDate="ngModel" [matDatepicker]="picker" [matDatepickerFilter]="myDatesFilter" name="shipDate" required [min]="minShipDate" [(ngModel)]="orderInfo.shipDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker ></mat-datepicker>
+          <mat-hint class="bi bi-exclamation-circle-fill">Weekends & busy Dates are invalid</mat-hint>
+          <mat-error class="bi bi-exclamation-circle-fill" *ngIf="shipDate.errors && shipDate.errors['required']"> Missing Shipping Date</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="orderInputs" >
+          <mat-label>City</mat-label>
+            <input matInput (dblclick)="autoSelect('shipCity')" #shipCity="ngModel" type="text" title="select Ship City" name="shipCity" [(ngModel)]="orderInfo.shipCity" required minlength="2" maxlength="20">
+            <mat-error *ngIf="shipCity.touched && shipCity.errors && shipCity.errors['required']">Missing City Name</mat-error>
+            <mat-error *ngIf="shipCity.touched && shipCity.errors && (shipCity.errors['minlength']|| shipCity.errors['maxlength'])">Street Name must be between 2-20 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="orderInputs" >
+          <mat-label>Street</mat-label>
+            <input matInput (dblclick)="autoSelect('shipStreet')" #shipStreet="ngModel" type="text" title="select Ship Street" name="shipStreet" [(ngModel)]="orderInfo.shipStreet" required minlength="2" maxlength="20">
+            <mat-error *ngIf="shipStreet.touched && shipStreet.errors && shipStreet.errors['required']">Missing Street Name</mat-error>
+            <mat-error *ngIf="shipStreet.touched && shipStreet.errors && (shipStreet.errors['minlength']|| shipStreet.errors['maxlength'])">Street Name must be between 2-20 characters</mat-error>
+      </mat-form-field>
+
+        <br/>
+    <h3>Payments</h3>
+      <mat-form-field appearance="fill" class="orderInputs" >
+        <mat-label>Credit Card</mat-label>
+          <input matInput #creditCard="ngModel" type="number"  title="credit Card" name="creditCard" [(ngModel)]="orderInfo.creditCard" required [pattern]="creditRegEx" min="0">
+          <mat-error *ngIf="creditCard.touched && creditCard.errors && creditCard.errors['required']">Missing credit Card</mat-error>
+          <mat-error *ngIf="creditCard.touched && creditCard.errors && creditCard.errors['pattern']">Invalid Credit Card</mat-error>
+        </mat-form-field>
+
+    <br/><br/>
+    <button mat-stroked-button color="primary" #orderBtn [disabled]="orderForm.invalid"  type="submit"><i class="bi bi-truck"></i> Order</button>
+  </form>
+</div>

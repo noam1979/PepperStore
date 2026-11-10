@@ -1,0 +1,23 @@
+.orderDiv{
+  padding: 20px;;
+}
+
+h1{
+  font-family: 'Unbounded', cursive;
+  font-weight: bold;
+}
+
+h3{
+  margin-top: 10px;
+  font-family: 'Unbounded', cursive;
+}
+
+
+button{
+  width: 100%;
+  font-family: 'Unbounded', cursive;
+}
+
+.orderInputs{
+  margin-right: 10px;
+}

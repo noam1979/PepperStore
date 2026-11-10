@@ -1,0 +1,10 @@
+.footerDiv{
+background-color: #343c4f;
+width: 100%;
+height: 100%;
+color: white;
+text-align: center;
+padding:10px;
+font-size: smaller;
+font-family: 'Unbounded', cursive;
+}

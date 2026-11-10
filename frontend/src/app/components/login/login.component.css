@@ -1,0 +1,81 @@
+.loginDiv{
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+}
+
+.formDiv{
+    padding-top: 40px;
+    align-self: center;
+    grid-row: span 5;
+    grid-column: span 4;
+    height: 100%;
+}
+
+h1{
+  font-family: 'Unbounded', cursive;
+}
+
+
+.signLink{
+ display: inline;
+ font-family: 'Sriracha', cursive;
+ font-size: larger;
+ color: rgb(88, 88, 199);
+
+}
+
+.form{
+    height: 80%;
+    width: 100%;
+}
+
+.loginInputs {
+  width: 100%;
+}
+
+
+
+.warningsDiv{
+  color: rgb(202, 34, 34);
+  font-size: smaller;
+  margin-top: 10px;
+}
+
+.loginBtn{
+  width: 100%;
+  font-family: 'Unbounded', cursive;
+  margin-top: 15px;
+}
+
+.btnDiv{
+    grid-row: span 1;
+    grid-column: span 4;
+}
+
+.shopBtn{
+   height: 100%;
+   width: 100%;
+   font-size: 18px;
+   color: whitesmoke;
+   font-weight: bold;
+   border-radius: 10px;
+   font-family: 'Unbounded', cursive;
+   animation: bounce2 2s ease infinite;
+
+
+}
+
+.shopBtn:disabled{
+    animation: none;
+  }
+
+
+  @keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+    40% {transform: translateX(-10px);}
+    60% {transform: translateX(-10px);}
+  }
+

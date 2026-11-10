@@ -1,0 +1,36 @@
+form{
+  padding: 15px;
+}
+
+.bi-exclamation-circle-fill{
+  color: #f44336
+}
+
+.alreadyMessage{
+  font-size: x-small;
+}
+
+.noLines{
+  display: none;
+}
+
+.registerInputs {
+  width: 100%;
+margin-bottom: 10px;
+}
+
+button{
+  width: 100%;
+  font-family: 'Unbounded', cursive;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Sriracha', cursive;
+  color: rgb(88, 88, 199);
+}
+
+h1 span{
+  font-size: smaller;
+}
+
