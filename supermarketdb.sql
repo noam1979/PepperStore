@@ -7,6 +7,10 @@
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
+DROP DATABASE IF EXISTS `supermarketdb`;
+CREATE DATABASE `supermarketdb`;
+USE `supermarketdb`;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -208,6 +212,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`firstName`, `lastName`, `userId`, `username`, `password`, `city`, `street`, `role`) VALUES
 ('shira', 'cohen', 300481164, 'shira@gmail.com', '12345677a!', 'Beer-Sheva', 'Dor', 0),
 ('Lital', 'Ackerman', 300481165, 'litala@gmail.com', '12345678a!', 'Jerusalem', 'Hakane', 1),
+('Noam', 'Nadav', 336066736, 'noamnadav123@gmail.com', '12345678@a', 'PetakhTikva', 'Bloy', 0),
 ('Moti', 'Nadav', 302422621, 'moti@gmail.com', 'motmot12@', 'Haifa', 'Hagome', 0);
 
 --

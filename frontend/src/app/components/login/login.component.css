@@ -55,17 +55,18 @@ h1{
     grid-column: span 4;
 }
 
-.shopBtn{
+
+
+.shopBtn {
    height: 100%;
    width: 100%;
    font-size: 18px;
-   color: whitesmoke;
+   color: #7bed9f !important;           /* Light green text with important flag */
+   background-color: #d63031 !important; /* Pepper red background */
    font-weight: bold;
    border-radius: 10px;
    font-family: 'Unbounded', cursive;
    animation: bounce2 2s ease infinite;
-
-
 }
 
 .shopBtn:disabled{
